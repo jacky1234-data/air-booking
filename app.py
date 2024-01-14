@@ -6,7 +6,7 @@ import numpy as np
 #Initialize the flask App
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
-path = "D:\\Original-comp-edisk\\class material\\Professional Development\\Air Booking Completion Prediction"
+
 
 yes_no = ["Yes","No"]
 
