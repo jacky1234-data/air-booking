@@ -63,8 +63,6 @@ def predict():
                 'wants_preferred_seat': 0.456926943503086,
                 'wants_in_flight_meals': 0.4946683119019396}
     
-    with open(path + "\\templates\\" + 'index.html', 'r') as file:
-        html_content = file.read()
 
     passenger_select = request.form.get('num_passengers')
     purchase_lead = request.form.get('purchase_lead_val')
