@@ -1,119 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Air Booking Completion Prediction Project</title>
-	<link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <title>Heroku PHP Example</title>
 </head>
 <body>
-	<header>
-		<h1>Welcome to Airline Booking Completion Prediction Project</h1>
-		<h4>
-			<p>	
-			Welcome to our cutting-edge Airline Booking Completion Prediction Project powered by machine learning! 
-			Our innovative platform harnesses the predictive prowess of AI to revolutionize the way we anticipate flight booking completions. 
-			By leveraging advanced algorithms and historical data analysis, we've crafted a system that forecasts the likelihood of booking completion.
-			</p>
-			<p>
-				Join us on this groundbreaking journey, where data-driven intelligence meets seamless travel planning. 
-				Explore the predictive capabilities derived from this <a href="https://www.kaggle.com/" target="_blank" id = "kaggle">Kaggle's</a> robust dataset, 
-				shaping a smarter and more informed approach to booking flights.
-			</p>
-		</h4>
-	</header>
-		<main>
-			<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS1GR7mjQSd6DeAFcRWrEk7Qo9OMM6tmM1uxemd8q8OKBcHBUmdAflR9t5U_jMbZKWQoRLTpQx646kG/pub?gid=1988853117&single=true&output=csv" target="_blank" id = "links">Here is the dataset</a>
-			<form action='/predict' method="post" style ='display:inline-block;'>
-			<ul> <li>
-				<label for="num_passengers" id="num__passengers">Please select the number of passengers</label>
-				<select id="num_passengers" name = "num_passengers">
-					{% for each in passenger_opt %}
-						{% if each == passenger %}
-                    		<option value="{{each}}" selected = "true">{{each}}</option>
-                		{% else %}
-                   			 <option value="{{each}}">{{each}}</option>
-						{% endif %}
-           			{% endfor %}
-	  			</select> </li>
-	  			<li> 
-	  				<label for="purchase_lead" id="purchase_lead">How many days you will book in advance</label>
-	  				<div class="slidecontainer" name = "purchase_lead">
-					  <input type="range" min="1" max="300" name = "purchase_lead_val" value="{{purchase_lead_val}}" class="slider" id="purchase_lead" oninput="rangeValueA.innerText = this.value"> <p id="rangeValueA">{{purchase_lead_val}}</p>
-					</div>
-				</il>
-				<li>
-					<label for="length_of_stay" id="length of stay">Please select your length of stay</label>
-	  				<div class="slidecontainer">
-					  <input type="range" min="1" max="180" value="{{length_of_stay_val}}" name = "length_of_stay_val" class="slider" id="length_of_stay" oninput="rangeValueB.innerText = this.value"> <p id="rangeValueB">{{length_of_stay_val}}</p>
-					</div>
-				</li>
-				<li>
-					<label for="flight_hour" id="flight hour">Please select the starting hour of flight</label>
-					<select id="flight_hour" name = "flight_hour">
-					{% for each in hour_opt %}
-						{% if each == hour_start %}
-                    		<option value="{{each}}" selected = "true">{{each}}</option>
-                		{% else %}
-                   			 <option value="{{each}}">{{each}}</option>
-						{% endif %}
-           			{% endfor %}	
-					</select>
-				</li>
-	
-				<li>
-					<label for="flight_duration" id="flight__duration">Please select the flight duration in hours</label>
-	  				<div class="slidecontainer">
-					  <input type="range" min="3.0" max="12.0" name = "flight_duration_val" value="{{flight_duration_val}}" step="0.1" class="slider" id="flight_duration" oninput="rangeValueC.innerText = this.value"> <p id="rangeValueC">{{flight_duration_val}}</p>
-					</div>
-				</li>
-				<li>
-					<label for="want_bag" id="wants">Do you want extra baggages</label>
-					<select id="wants_extra_baggage" name="wants_extra_baggage">
-					{% for each in want_bag_opt %}
-						{% if each == want_bag_val %}
-                    		<option value="{{each}}" selected = "true">{{each}}</option>
-                		{% else %}
-                   			 <option value="{{each}}">{{each}}</option>
-						{% endif %}
-           			{% endfor %}
-					</select>
-				</li> 
-				<li>
-					<label for="want_seat" id="wants">Do you want preferred seat</label>
-					<select id="wants_preferred_seat" name="wants_preferred_seat">
-					{% for each in want_seat_opt %}
-						{% if each == want_seat_val %}
-                    		<option value="{{each}}" selected = "true">{{each}}</option>
-                		{% else %}
-                   			 <option value="{{each}}">{{each}}</option>
-						{% endif %}
-           			{% endfor %}
-					</select> 
-				</li>
-				<li>
-					<label for="want_meal" id="wants">Do you want in flight meals</label>
-					<select id="wants_in_flight_meals" name="wants_in_flight_meals">
-					{% for each in want_meal_opt %}
-						{% if each == want_meal_val %}
-                    		<option value="{{each}}" selected = "true">{{each}}</option>
-                		{% else %}
-                   			<option value="{{each}}">{{each}}</option>
-						{% endif %}
-           			{% endfor %}
-					</select> 
-				</li> 
-			</ul>
-			<button type="submit" id="btn1" style ='display:inline-block;'>Predict</button>
-		</form>
-
-		<form action='/clear' method="post">
-			<button type="submit" id="btn2">Clear</button>
-		</form>
-			<p id = "conclusion">{{pred}} </p>
-		</main>
-		<footer>Thanks for reading</footer>
+    <h1>Hello from Heroku PHP!</h1>
+    
+    <?php
+        // Include the content from content.html
+        include 'index.html';
+    ?>
+    
+    <p>This is additional content in the PHP file.</p>
 </body>
-
 </html>
-<?php include_once("index.html"); ?>
