@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request
 import pickle
-import requests
 import pandas as pd
 import numpy as np
 #Initialize the flask App
