@@ -1,0 +1,109 @@
+body{
+	background-color: #F5EE0B;
+}
+
+header h1{
+	font-size: 3rem;
+	color:rgba(16,11,245,.75);
+	text-align: center;
+}
+
+header h4{
+	font-size: 2rem;
+	color:rgba(16,11,245,.75);
+	text-align: center;
+}
+
+#kaggle{
+	font: 1.5rem;
+}
+
+#links{
+	background-color: #DE0AB8;
+	display: block;
+	font-size: 4rem;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+a:hover{
+  	color:#00FFFF;	
+}
+
+ul li{
+	display: inline-block;
+	width: 35%;
+	font-size: 3rem;
+	color:rgba(16,11,245,.75);
+	font-weight: bold;
+	margin-left: 6%;
+	margin-right: 6%;
+	margin-bottom: 2%;
+}
+
+#purchase_lead, #rangeValueA{
+	display: inline;
+}
+
+#length_of_stay, #rangeValueB{
+	display: inline;
+}
+
+#flight_duration, #rangeValueC{
+	display:inline;
+}
+
+#rangeValueA, #rangeValueB, #rangeValueC{
+	color:#0d48ec;
+}
+
+#num_passengers, #num__passengers{
+	display: block;
+	margin-bottom: 2%;
+}
+
+
+#wants, #wants_extra_baggage{
+	display: block;
+	margin-bottom: 5%;
+}
+
+
+option, #num_passengers, #flight_hour, #wants_extra_baggage, #wants_preferred_seat, #wants_in_flight_meals{
+	width:25%;
+	color:#0d48ec;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+
+.slider{
+	-webkit-appearance: none;
+  width: 60%;
+  height: 5%;
+  background: #04AA6D;
+  opacity: 0.9;
+  cursor: pointer;
+  display: inline;
+}
+
+button {
+	min-width:50%;
+	font-size:5rem;
+	color: #0B33F5;
+	background-color: #F50B9B;
+	text-align: center;
+	margin-left: 23%;
+	margin-right: 23%;
+	margin-bottom: 3%;
+}
+
+#conclusion, footer{
+	font-size: 3rem;
+	color: #0B33F5;
+	text-align: center;
+	font-weight: bold;
+}
